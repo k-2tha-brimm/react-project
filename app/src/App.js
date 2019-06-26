@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Campaign from './Campaign.js'
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const url = "http://www.plugco.in/public/take_home_sample_feed/";
@@ -25,17 +26,13 @@ class App extends React.Component {
   render () {
 
     if(!this.state.data) {
-      console.log('NO DATA');
       return null;
-    } else {
-      this.state.data.campaigns.forEach(camp => {
-        console.log(camp);
-      })
     }
 
     let campaigns = (
-      this.state.data.campaigns.map(camp => (
-        <li className="campaign-name" style={{listStyle: "none"}}>{camp.campaign_name}</li>  
+      this.state.data.campaigns.map((camp, idx) => (
+        // <li className="campaign-name" style={{listStyle: "none"}} key={idx}>{camp.campaign_name}</li>  
+        <li className="campaign-name" style={{listStyle: "none"}} key={idx}><Campaign campaign={camp} /></li>
       ))
     )
 
