@@ -1,5 +1,6 @@
 import React from 'react';
-import './Media.css'
+import './Media.css';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 function Media(props) {
 
@@ -15,10 +16,12 @@ function Media(props) {
                     <i className="fas fa-play" id="play-btn"></i>
                 </div>
                 <div className="link-container">
-                    <a href={props.media.tracking_link} 
-                        style={{borderRight: "1px solid rgb(238, 227, 227)"}}>
-                            <i className="fas fa-link" id="link"></i>
-                    </a>
+                    <CopyToClipboard text={props.media.tracking_link} >
+                        <a href={props.media.tracking_link} 
+                            style={{borderRight: "1px solid rgb(238, 227, 227)"}}>
+                                <i className="fas fa-link" id="link"></i>
+                        </a>
+                    </CopyToClipboard>
                     <a href={props.media.download_url}>
                         <i className="fas fa-download" id="link"></i>
                     </a>
@@ -36,10 +39,12 @@ function Media(props) {
                     />
                 </div>
                 <div className="link-container">
-                    <a href={props.media.tracking_link} 
-                        style={{borderRight: "1px solid rgb(238, 227, 227)"}}>
-                            <i class="fas fa-link" id="link"></i>
-                    </a>
+                <CopyToClipboard text={props.media.tracking_link} >
+                        <a href={props.media.tracking_link} 
+                            style={{borderRight: "1px solid rgb(238, 227, 227)"}}>
+                                <i className="fas fa-link" id="link"></i>
+                        </a>
+                    </CopyToClipboard>
                     <a href={props.media.download_url}>
                         <i class="fas fa-download" id="link"></i>
                     </a>
