@@ -1,44 +1,18 @@
-# JetFuel Take Home Exercise
+# JetFuel Take Home Exercise - Kevin Brimmerman
 
-This is a frontend exercise that will give you the chance to see what kind of things we build at JetFuel!
+## Project Overview
 
-You will be building a simplified version of our main app, the Plug (www.plugco.in). This is the app through which our influencer access our offers, track their earnings, and manage their account. In particular, you will be recreating our main 'offer' feed:
+This is my attempt at recreating the Plug app for mobile. This was done on the afternoon of June 26, 2019, using the iPhone X layout in Chrome developer tools.
 
-We've spun up an endpoint on our server to return a sample feed of offers as a JSON blob. You can access that here:
-http://www.plugco.in/public/take_home_sample_feed
+What I tried to do was break the application up into two main components. It felt natural to begin by creating a component for Campaigns. Then I began considering the layout of the application. Using a flex display and segmenting the component into two distince parts made sense, so I created a container for the Campaign's information (the logo, name, and CPI) that would sit on top of the media carousel.
 
-Your job is set up a react project that calls the sample endpoint and renders feed based on the JSON data returned. I've provided the design and an explanation of each component in a Sketch file - 'feed_template_react_01.sketch'. This file is included in the repository:
+From there I mapped over each media object to determine whether or not it was a video (they all were, it appears), and conditionally rendered a play button in the event that the media_type was "video".
 
-![starter-screenshot](https://i.imgur.com/ynkHNTC.png)
+Please see a short gif of the functioning app below.
 
-Note - We're only providing mobile designs. For the sake of this exercise, there's no need to build this for desktop!
+![Alt Text](app/src/demo_jetfuel.gif)
 
-We have a starter app provided in the `./app` directory, please complete your project here.
+I hope that you enjoy the result! I had a lot of fun doing this, and I would certainly welcome the challenge of getting the inline video/pull to refresh going, if that is something that you would like to see.
 
-Ideally, this should take around a day to finish, but let us know how much time you spent so we can calibrate our expectations!
-
-
-## Getting started
-
-Run the following commands:
-
-```
-cd app
-npm start
-```
-
-After that, your browser should open up a skeleton React app. You can edit any file in `./src/` and in _most_ cases the website will hot-reload.
-
-For more info, you can check out https://github.com/facebook/create-react-app
-
-## Bonus
-
-
-- Can you handle failed API requests gracefully? Maybe redirect to a 'failed' UI state with a rety option? 
-- Can you get the videos to play inline when the 'play' icon is tapped?
-- What steps can you take to optimize the load time of cover photos? How about the scroll performance? 
-- Can you add pull-to-refresh? 
-
-## Questions?
-
-Feel free to reach out if you have any questions!
+Cheers,
+Kevin!
