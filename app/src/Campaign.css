@@ -7,8 +7,8 @@
     display: flex;
     background: white;
     border-bottom: 1px solid rgb(238, 227, 227);
-    padding-bottom: 10px;
-    margin-top: 7px;
+    padding-bottom: 15px;
+    margin-top: 10px;
 }
 
 .info-container > img {
@@ -42,7 +42,7 @@
     background: rgb(248, 247, 247);
 }
 
-.the-container > img {
+.the-container > .image-container > img {
     border-radius: 7px;
     margin-left: 6px;
     margin-right: 6px;
@@ -53,16 +53,12 @@
     color: rgb(190, 186, 186);
 }
 
-#link:hover {
-    cursor: pointer;
-}
-
 .link-container {
     background: white;
     width: 75%;
     margin: auto;
     border-radius: 4px;
-    margin-left: 15px;
+    margin-left: 17px;
     margin-top: 7px;
     display: flex;
     justify-content: space-around;
@@ -73,4 +69,34 @@
     height: 15px;
     width: 20px;
     padding: 12px;
+}
+
+.image-container {
+    position: relative;
+}
+
+#play-btn {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(100, 100, 100);
+    color: white;
+    font-size: 16px;
+    border-radius: 7px;
+    height: 195px;
+    width: 71px;
+    opacity: 0.6;
+    padding: 6px 24px 0px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.fa-play:before {
+    position: absolute;
+    top: 50%;
+    opacity: 1;
+    color: white;
 }
