@@ -1,0 +1,31 @@
+.campaign-container {
+    display: flex;
+}
+
+.info-container {
+    display: flex;
+    background: white;
+}
+
+.info-container > img {
+    margin: auto;
+    border-radius: 7px;
+}
+
+.name-cpi-container {
+    margin: auto;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.name-cpi-container > p {
+    margin: auto;
+}
+
+.cpi {
+    color: rgb(42, 190, 42);
+}
+
+.campaign-name {
+    margin-bottom: 3px;
+}

@@ -32,7 +32,6 @@ class App extends React.Component {
 
     let campaigns = (
       this.state.data.campaigns.map((camp, idx) => (
-        // <li className="campaign-name" style={{listStyle: "none"}} key={idx}>{camp.campaign_name}</li>  
         <li className="campaign-name" style={{listStyle: "none"}} key={idx}><Campaign campaign={camp} /></li>
       ))
     )
