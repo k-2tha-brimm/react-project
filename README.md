@@ -16,3 +16,5 @@ I hope that you enjoy the result! I had a lot of fun doing this, and I would cer
 
 Cheers,
 Kevin!
+
+Update #1 - June 27th: Added a loading bar to the main application and an error message for when the API call returns no data to the app. Pulled a quote of the day from an external API to help fill some of the blank space.
