@@ -26,7 +26,6 @@ class Graceful extends React.Component {
         if(!this.state.data) {
             return null;
         }
-        console.log(this.state);
         return (
             <div className="error-message">
                 <div className="inner-text">
