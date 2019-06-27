@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Campaign from './Campaign.js'
+import TopNav from './Topbar.js'
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const url = "http://www.plugco.in/public/take_home_sample_feed/";
@@ -38,9 +39,10 @@ class App extends React.Component {
 
     return (
       <div className="App">
-          <ul>
-            {campaigns}
-          </ul>
+        <TopNav />
+        <ul>
+          {campaigns}
+        </ul>
       </div>
     );
   }
