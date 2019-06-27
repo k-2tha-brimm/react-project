@@ -1,14 +1,18 @@
 .campaign-container {
     display: flex;
+    flex-direction: column;
 }
 
 .info-container {
     display: flex;
     background: white;
+    border-bottom: 1px solid rgb(238, 227, 227);
+    padding-bottom: 10px;
+    margin-top: 7px;
 }
 
 .info-container > img {
-    margin: auto;
+    margin-left: 25px;
     border-radius: 7px;
 }
 
@@ -28,4 +32,45 @@
 
 .campaign-name {
     margin-bottom: 3px;
+}
+
+.media-carousel-container {
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background: rgb(248, 247, 247);
+}
+
+.the-container > img {
+    border-radius: 7px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#link {
+    position: inherit;
+    color: rgb(190, 186, 186);
+}
+
+#link:hover {
+    cursor: pointer;
+}
+
+.link-container {
+    background: white;
+    width: 75%;
+    margin: auto;
+    border-radius: 4px;
+    margin-left: 15px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(238, 227, 227);
+}
+
+.link-container > a {
+    height: 15px;
+    width: 20px;
+    padding: 12px;
 }

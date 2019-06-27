@@ -39,7 +39,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <TopNav />
-        <ul>
+        <ul style={{paddingLeft: 0, width: "100%"}}>
           {campaigns}
         </ul>
       </div>
