@@ -1,0 +1,10 @@
+.error-message {
+    top: 50%;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 40px;
+    padding: 10px;
+    background: aliceblue;
+    border-radius: 6px;
+    border: 1px solid darkgray;
+}

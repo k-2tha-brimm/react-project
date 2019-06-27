@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 import Campaign from './Campaign.js'
 import TopNav from './Topbar.js'
+import Graceful from './Graceful.js'
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const url = "http://www.plugco.in/public/take_home_sample_feed/";
+const url = "http://www.plugco.in/public/take_home_samplefeed/";
 
 class App extends React.Component {
 
@@ -13,6 +14,7 @@ class App extends React.Component {
 
     this.state = {
       data: null,
+      failure: false
     }
   }
   
@@ -20,14 +22,23 @@ class App extends React.Component {
     fetch(proxyurl + url)
       .then(res => res.json())
       .then(data => this.setState({ data }))
-      .catch(() => console.log("Can't access " + url + " response. Blocked by Browser?"));
+      .catch(() => {
+        this.setState({ failure: true })
+      });
   }
 
 
   render () {
 
-    if(!this.state.data) {
+    if(!this.state.data && this.state.failure === false) {
       return null;
+    } else if(this.state.failure && !this.state.data) {
+      return (
+        <div className="App">
+          <TopNav />
+          <Graceful />
+        </div>
+      );
     }
 
     let campaigns = (
@@ -40,14 +51,17 @@ class App extends React.Component {
       ))
     )
 
-    return (
-      <div className="App">
-        <TopNav />
-        <ul style={{paddingLeft: 0, width: "100%"}}>
-          {campaigns}
-        </ul>
-      </div>
-    );
+    if(this.state.failure === false) {
+      return (
+        <div className="App">
+          <TopNav />
+          <ul style={{paddingLeft: 0, width: "100%"}}>
+            {campaigns}
+          </ul>
+        </div>
+      );
+    }
+
   }
 }
 
