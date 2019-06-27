@@ -32,7 +32,7 @@ class Graceful extends React.Component {
                 <div className="inner-text">
                     <h1>Oops!</h1>
                     <p style={{borderBottom: "1px solid grey", paddingBottom: "20px"}}>
-                        Looks like something went wrong. Please retry your request.
+                        Looks like something went wrong. Please go back, and try again.
                     </p>
                 </div>
 

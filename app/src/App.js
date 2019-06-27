@@ -5,7 +5,7 @@ import TopNav from './Topbar.js'
 import Graceful from './Graceful.js'
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const url = "http://www.plugco.in/public/take_home_samplefeed/";
+const url = "http://www.plugco.in/public/take_home_sample_feed/";
 
 class App extends React.Component {
 
